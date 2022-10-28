@@ -1,0 +1,100 @@
+.header {
+   &__container-max {
+      max-width: 1052px;
+      margin: 0 auto;
+      padding: 0px 10px;
+   }
+
+   &__menu {
+      height: 82px;
+      padding: 10px 0px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      @media (max-width: $mobile) {
+         height: 50px;
+      }
+   }
+}
+.menu {
+   &__btn {
+      @media (max-width: $mobile) {
+         width: 30px;
+         height: 30px;
+         position: relative;
+         z-index: 50;
+         overflow: hidden;
+         &._active span:nth-of-type(1) {
+            display: none;
+         }
+         &._active span:nth-of-type(2) {
+            top: 50%;
+            transform: translate(-50%, 0%) rotate(45deg);
+         }
+         &._active span:nth-of-type(3) {
+            top: 50%;
+            transform: translate(-50%, 0%) rotate(-45deg);
+         }
+         span {
+            width: 30px;
+            height: 2px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #222222;
+            transition: all 0.5s;
+            &:nth-of-type(2) {
+               top: calc(50% - 5px);
+            }
+            &:nth-of-type(3) {
+               top: calc(50% + 5px);
+            }
+         }
+      }
+   }
+
+   &__body {
+      @media (max-width: $mobile) {
+         position: fixed;
+         z-index: 10;
+         overflow: auto;
+         top: 0;
+         right: 0;
+         width: 100%;
+         height: 100%;
+         padding: 15px;
+         background: rgba(231, 231, 231, 0.869);
+         transform: translateY(-100%);
+         transition: transform 0.5s;
+         &._active {
+            transform: translateY(0);
+         }
+      }
+   }
+
+   &__list {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 30px;
+      @media (max-width: $mobile) {
+         flex-direction: column;
+         margin-top: 50px;
+      }
+   }
+
+   &__link {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 29px;
+      color: #000;
+      text-decoration: none;
+      transition: 0.3s ease 0s;
+      @media (min-width: $tablet) {
+         &:hover {
+            color: #ff6464;
+         }
+      }
+   }
+}

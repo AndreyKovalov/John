@@ -1,0 +1,102 @@
+// mixins
+@import "mixins";
+// =====================================
+
+//fonts========================================================
+//&display=swap &subset=cyrillic-ext(если сайт с кириллицей)================================
+@import url(https://fonts.googleapis.com/css?family=Heebo:regular,500,700,900&display=swap);
+@import "fonts";
+//fonts========================================================
+
+// иконочные шрифты
+@import "icons";
+// =======================
+
+// шрифт по умолчанию
+$fontFamily: "Heebo";
+
+// НАСТРОЙКИ ===============================================================================================================================================================================================================================================================================================
+// Минимальная ширина страницы
+$minWidth: 320px;
+// Ширина полотна (макета)
+$maxWidth: 1152px;
+// Ширина ограничивающего контейнера (0 = нет ограничения)
+$maxWidthContainer: 856px;
+$maxWidthContainerMini: 681px;
+// Общий отступ у контейнера
+// (30 = по 15px слева и справа, 0 = нет отступа)
+$containerPadding: 20px;
+
+// Ширина срабатывания первого брейкпоинта
+$containerWidthHome: $maxWidthContainer + $containerPadding;
+$containerWidthMini: $maxWidthContainerMini + $containerPadding;
+
+// Брейк-поинты
+$tablet: 991.98px; // Планшеты, некоторые телефоны в горизонтальном положении
+$mobile: 767.98px; // Телефоны L
+$mobileSmall: 479.98px; // Телефоны S
+
+// reset
+@import "null";
+
+// оболочка
+.body {
+   font-family: $fontFamily;
+   color: #21243d;
+   font-size: 16px;
+}
+
+.wrapper {
+   min-height: 100%;
+   overflow: hidden;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+}
+
+// container основная сетка
+[class*="__container"] {
+   margin: 0 auto;
+   padding: 0px 10px;
+   max-width: $containerWidthHome;
+   @media (max-width: $mobile) {
+      max-width: 750px;
+   }
+   @media (max-width: $mobileSmall) {
+      max-width: none;
+      padding: 0 10px;
+   }
+}
+[class*="__container-mini"] {
+   margin: 0 auto;
+   padding: 0px 10px;
+   max-width: $containerWidthMini;
+   @media (max-width: $mobileSmall) {
+      max-width: none;
+      padding: 0 18px;
+   }
+}
+
+// основная сетка
+
+// подключение файлов общих стилей и форм
+@import "ui";
+// подключение файлов общих стилей и форм
+
+// подключение файлов стилей страниц и элементов
+@import "header";
+@import "home";
+@import "works";
+@import "blog";
+@import "article";
+@import "footer";
+// подключение файлов стилей страниц и элементов
+
+// основной блок
+.page {
+   flex: 1 1 auto;
+   padding: 80px 0px 30px;
+   @media (max-width: $mobile) {
+      padding: 30px 0px 30px;
+   }
+}

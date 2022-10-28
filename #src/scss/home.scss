@@ -1,0 +1,196 @@
+.hello {
+   padding: 0px 0px 70px 0px;
+   @media (max-width: $mobile) {
+      padding: 0px 0px 60px 0px;
+   }
+
+   &__container {
+      display: flex;
+      align-items: flex-start;
+      order: 2;
+      @media (max-width: $mobile) {
+         flex-direction: column-reverse;
+         align-items: center;
+         gap: 43px;
+      }
+   }
+
+   &__content {
+      flex: 1 1 auto;
+      padding: 18px 115px 0px 0px;
+      *:first-child {
+         margin-top: 0px;
+      }
+      @media (max-width: $mobile) {
+         padding: 0;
+         text-align: center;
+      }
+   }
+
+   &__title {
+      @media (max-width: $mobile) {
+         padding: 0px 32px;
+      }
+   }
+
+   &__text {
+      margin: 35px 0px 0px 0px;
+      @media (max-width: $mobile) {
+         margin: 20px 0px 0px 0px;
+         padding: 0px 12px;
+      }
+   }
+
+   &__button {
+      margin: 35px 0px 0px 0px;
+      display: inline-flex;
+      padding: 0px 20px;
+      line-height: 47px;
+      background-color: #ff6464;
+      border-radius: 2px;
+      font-weight: 500;
+      font-size: 20px;
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s ease 0s;
+      &:hover {
+         background-color: #d66464;
+      }
+      @media (max-width: $mobile) {
+         margin: 27px 0px 0px 0px;
+      }
+   }
+
+   &__avatar {
+      order: 1;
+      flex: 0 0 231px;
+      height: 231px;
+      border-radius: 50%;
+      box-shadow: -5px 13px 0px 0px #edf7fa;
+      @media (max-width: $mobile) {
+         flex: 0 0 170px;
+         height: 170px;
+      }
+   }
+}
+
+// resent-posts=====================================================================================
+.recent-posts {
+   padding: 10px 0px 32px;
+   background-color: #edf7fa;
+   @media (max-width: $mobileSmall) {
+      padding: 0px 0px 38px;
+   }
+}
+
+.recent-posts__header {
+   display: flex;
+   align-items: center;
+}
+
+.recent-posts__title {
+   flex: 1 1 auto;
+   @media (max-width: $mobileSmall) {
+      text-align: center;
+      font-size: 18px;
+   }
+}
+
+.recent-posts__view-all {
+   flex: 0 0 auto;
+   font-weight: 400;
+   line-height: 24 / 16 * 100%;
+   color: #00a8cc;
+   @media (max-width: $mobileSmall) {
+      display: none;
+   }
+}
+
+.recent-posts__items {
+   display: flex;
+   gap: 20px;
+   @media (max-width: $mobile) {
+      flex-direction: column;
+   }
+}
+
+.recent-posts__item {
+   flex: 0 1 calc(50% - 10px);
+}
+
+.item-recent-posts {
+   padding: 25px 58px 22px 19px;
+   background: #fff;
+   box-shadow: 0px 4px 10px rgba(187, 225, 250, 0.25);
+   border-radius: 4px;
+   *:first-child {
+      margin-top: 0px;
+   }
+   @media (max-width: $mobile) {
+      padding: 12px 21px 22px 19px;
+   }
+}
+
+.item-recent-posts__title {
+   font-weight: 700;
+   font-size: 26px;
+   line-height: 38 / 26 * 100%;
+   color: #21243d;
+   @media (max-width: $mobileSmall) {
+      font-size: 22px;
+   }
+}
+
+.item-recent-posts__info {
+   margin: 25px 0px 0px 0px;
+   @media (max-width: $mobileSmall) {
+      margin: 12px 0px 0px 0px;
+   }
+   span {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 26 / 18 * 100%;
+      &:first-child {
+         border-right: 1px solid #000;
+         padding-right: 24px;
+      }
+      &:last-child {
+         padding-left: 24px;
+      }
+   }
+}
+
+.item-recent-posts__text {
+   margin: 23px 0px 0px 0px;
+   @media (max-width: $mobileSmall) {
+      margin: 19px 0px 0px 0px;
+   }
+}
+
+// features-works=======================================================================================
+.featured-works {
+   padding: 15px 0px 50px 0px;
+   @media (max-width: $mobile) {
+      padding: 3px 0px 0px 0px;
+   }
+}
+.featured-works__title {
+   margin: 0px 0px 11px 0px;
+   @media (max-width: $mobile) {
+      text-align: center;
+   }
+}
+
+.featured-works__works {
+   @media (max-width: $mobileSmall) {
+      display: flex;
+      overflow: auto;
+   }
+}
+
+.works__item {
+   @media (max-width: $mobileSmall) {
+      flex: 1 0 90%;
+      margin: 0px 20px 0px 0px;
+   }
+}
